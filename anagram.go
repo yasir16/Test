@@ -8,12 +8,7 @@ import (
 func mappingStr(str string) map[string]int {
 	mapping := make(map[string]int)
 	for _, word := range str {
-		count := mapping[string(word)]
-		if count == 0 {
-			mapping[string(word)] = 1
-		} else {
-			mapping[string(word)] = count + 1
-		}
+		mapping[string(word)]++
 	}
 	return mapping
 }
